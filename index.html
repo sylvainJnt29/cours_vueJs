@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Cours Udemy vue.Js 2 - Le guide complet</title>
+</head>
+<body>
+    <!-- Cours commencé le 09/03/2021 -->
+    <h1>Entrainement et initiation à vueJs</h1>
+
+
+    <div id="app">
+        <h2 v-once>{{ title + "!!"}}</h2> <!-- v-once stop l'actualisation d'une variable -->
+        <h2>{{ title }}</h2>
+        <h2>{{ title == "Super intro !" ? "Bon sens" : "Mauvais sens"}}</h2>
+        <!-- <input type="text" v-model="title"> -->
+        <button v-on:click="reverseTitle">Inverser</button>
+        <i>On utilise v-once pour stopper l'actualisation d'une variable.</i><br>
+        <i>On utilise v-once :title="title" dans la balise  "p" pour faire pareil (visible au survol du texte).</i>
+
+        <!-- <p v-bind:title="title"> ou <p :title="title"> -->
+        <p :title="title">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Ut recusandae molestiae alias hic voluptates, placeat quas eveniet ipsa impedit,
+            velit iusto eaque! Repellat saepe aperiam alias dolores quis beatae voluptate.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque incidunt doloremque
+            ad eligendi, nulla dolorem ea asperiores quis fugit quos nam maiores officiis expedita,
+            consequatur numquam molestiae, debitis reiciendis nemo!
+            <span><h3>{{title}}</h3></span>
+        </p>
+        <p v-once :title="title">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Ut recusandae molestiae alias hic voluptates, placeat quas eveniet ipsa impedit,
+            velit iusto eaque! Repellat saepe aperiam alias dolores quis beatae voluptate.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque incidunt doloremque
+            ad eligendi, nulla dolorem ea asperiores quis fugit quos nam maiores officiis expedita,
+            consequatur numquam molestiae, debitis reiciendis nemo!
+            <span><h3>{{ title }}</h3></span>
+            <span v-html="strongTag"><h3></h3></span><br>
+            <i>On utilise notre variable strongTag déclarée dans le fichier vue.js avec v-html="strongTag" 
+                dans la balise "span" pour ajouter du code html</i>
+        </p>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="vue.js"></script>
+</body>
+</html>
