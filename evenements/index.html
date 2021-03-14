@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Cours Udemy vue.Js 2 - Le guide complet</title>
+</head>
+<body>
+    
+    <h1>Entrainement et initiation à vueJs</h1>
+    <h2>Les évènements</h2>
+
+    <div id="app">
+        <!-- <button v-on:click="increase">Incrémenter</button> -->
+        <!-- @click = v-on:click -->
+        <button @click="increase">Incrémenter</button>
+        <h3>{{counter}}</h3>
+        <button v-on:click="decrease">Décrémenter</button>
+        <h3>{{counterBis}}</h3>
+        <button @click="increase10(10)">Compter de 10 en 10</button>
+        <h3>{{counter10}}</h3>
+        <p @mouseover="hover">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, velit iste inventore corporis
+            ratione vel debitis cum enim architecto officia doloremque blanditiis? Vitae, amet corrupti optio
+            impedit officiis nam consequuntur.<br>
+            <strong>Important !</strong><br>
+            <!-- @mouseover.stop = stop la propagation -->
+            <!-- <strong @mouseover.stop>Important !</strong><br> -->
+            Balise: {{tagName}}
+        </p>
+        <p>
+            <input type="text" @keyup.enter.space="alert('une touche')"><br>
+            <i>@keyup.enter.space permet de déclencher une action après utilisaiton de la touche "enter" ou "space".</i>
+        </p>
+
+    
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="vue.js"></script>
+</body>
+</html>

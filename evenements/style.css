@@ -1,0 +1,20 @@
+body{
+    background: #2980B9;
+    background: -webkit-linear-gradient(to left, #2980B9, #6DD5FA, #2980B9);
+    background: linear-gradient(to left, #2980B9, #6DD5FA, #2980B9);
+    justify-items: center;
+    text-align: center;
+    padding-top: 20px;
+    font-size: large;
+}
+p{ 
+    margin-top: 5%;
+    margin-left: 25% ;
+    margin-right: 25% ;
+}
+#app button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
