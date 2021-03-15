@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Cours Udemy vue.Js 2 - Le guide complet</title>
+</head>
+<body>
+    
+    <h1>Entrainement et initiation à vueJs</h1>
+    <h2>Les variables avancées</h2>
+
+
+    <div id="app">
+        <button @click="counter++">Incrémenter</button>
+        <button @click="counter--">Décrémenter</button>
+        <button @click="counter2++">Incrémenter 2</button>
+        <h3>{{counter}}</h3>
+        <h3>{{ wordMethod() }} / {{ wordComputed }} / {{ word }}</h3>
+        <h3>{{counter2}}</h3>
+
+
+    </div>
+    <i>vueJs permet de créer des variables qui sont dépendantes d'une autre variable ( computed property ).</i>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="vue.js"></script>
+</body>
+</html>
