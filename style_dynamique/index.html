@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Cours Udemy vue.Js 2 - Le guide complet</title>
+</head>
+<body>
+    
+    <h1>Entrainement et initiation à vueJs</h1>
+    <h2>Rendre son style dynamique</h2>
+
+
+    <div id="app">
+
+        <button @click="isYellow = !isYellow">Jaune</button>
+        <button @click="isUnderline = !isUnderline">Souligner</button>
+
+
+        <h1 class="title" :class="[myClass, {red: !isYellow}]">Titre </h1>
+        <h1 class="title" :style="[{color:color},myStyle]">Titre 1</h1>
+        <h1 class="title" :style="myStyle">Titre 2</h1>
+        <h1 class="title" :style="myStyle">Titre 3</h1>
+
+        <input type="text" v-model="color">
+        <br><i>On saisit une couleur pour modifier "titre 1".</i>
+
+        <br><input type="text" v-model="size">
+        <br><i>On saisit une taille de police pour modifier tous les titres.</i>
+
+
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="vue.js"></script>
+</body>
+</html>
