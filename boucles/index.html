@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Cours Udemy vue.Js 2 - Le guide complet</title>
+</head>
+<body>
+    
+    <h1>Entrainement et initiation à vueJs</h1>
+    <h2>Les boucles</h2>
+
+
+    <div id="app">
+        <i>On ressort des noms contenus dans un array avec "v-for".</i>
+        <li v-for="name in names">{{ name }}</li>
+        <hr>
+        <i>On ressort les index et les noms contenus dans un array avec "v-for".</i>
+        <li v-for="(name,index) in names">{{ index }} - {{ name}}</li>
+        <hr>
+        <i>On choisit l'index désiré.</i>
+        <li>{{ names[0]}}</li>
+        <hr>
+        <i>On peut également utiliser la balise "template".</i>
+        <template v-for="(name,i) in names">
+            <h1>{{ name }}</h1>
+            <span>{{ i }}</span>
+        </template>
+    </div>
+    <hr>
+    <div id="app2">
+        <template v-for="(myObject in names)">
+            <h1 v-for="info in myObject">{{ info }}</h1>
+            <h2 v-for="(info,key,i) in myObject">{{ key }} : {{ info }} ({{ i }})</h2>
+        </template>
+    <hr>
+    <ul>
+        <li v-for="n in 10">{{ n }}</li>
+    </ul>
+    <hr>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="vue.js"></script>
+</body>
+</html>
