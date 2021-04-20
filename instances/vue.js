@@ -37,7 +37,7 @@ new Vue({
 
 
 //                                      liaison entre plusieurs instances
-
+/*
 var vm1 = new Vue({
     el: '#app',
     data:{
@@ -75,3 +75,40 @@ var vm3 = new Vue({
     template: "<h3>Template !</h3>"
 })
 vm3.$mount('#app3')
+*/
+
+//                                      Les hooks
+
+var vm1 = new Vue({
+    el: "#hooks",
+    data: {
+        title : "Hello World :)"
+    },
+    methods: {
+        editTitle: function(){
+            this.title = "Nouveau titre !"
+        }
+    },
+    beforeCreate: function(){
+        console.log('Before create')
+    },
+    created: function(){
+    console.log('Created')
+    },
+    beforeUpdate: function(){
+        console.log('Before update')
+    },
+    updated: function(){
+    console.log('Updated')
+    },
+    beforeDestroy: function(){
+        console.log('Before destroy')
+    },
+    destroyed: function(){
+    console.log('Destroyed')
+    }
+})
+
+setTimeout(function(){
+    vm1.$destroy()
+}, 1500)
