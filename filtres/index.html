@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cours Udemy vue.Js 2 - Le guide complet</title>
+</head>
+<body>
+    
+    <h1>Entrainement et initiation à vueJs</h1>
+    <h2>Les filtres</h2>
+
+
+    <div id="app">
+        <!-- Mise en place d'un filtre pour récupérer le 1er mot -->
+        <h3>{{ myText | getWordByIndex(1) | capitalize }}</h3>
+    </div>
+    <div id="app2">
+        <!-- Mise en place d'un filtre pour récupérer le 1er mot -->
+        <h3>{{ myText2 | firstWord | capitalize }}</h3>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="vue.js"></script>
+</body>
+</html>
